@@ -14,6 +14,7 @@
 		5E38B05F259C366A00A70D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E38B05E259C366A00A70D86 /* Assets.xcassets */; };
 		5E38B062259C366A00A70D86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E38B061259C366A00A70D86 /* Preview Assets.xcassets */; };
 		5E38B065259C366A00A70D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E38B063259C366A00A70D86 /* LaunchScreen.storyboard */; };
+		5E38B06F259C36B400A70D86 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38B06E259C36B400A70D86 /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5E38B061259C366A00A70D86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E38B064259C366A00A70D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E38B066259C366A00A70D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E38B06E259C36B400A70D86 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		5E38B054259C366900A70D86 /* Task Timer */ = {
 			isa = PBXGroup;
 			children = (
+				5E38B06D259C369F00A70D86 /* Views */,
 				5E38B055259C366900A70D86 /* AppDelegate.swift */,
 				5E38B057259C366900A70D86 /* SceneDelegate.swift */,
 				5E38B059259C366900A70D86 /* ContentView.swift */,
@@ -76,6 +79,14 @@
 				5E38B061259C366A00A70D86 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5E38B06D259C369F00A70D86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E38B06E259C36B400A70D86 /* TimerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			files = (
 				5E38B056259C366900A70D86 /* AppDelegate.swift in Sources */,
 				5E38B058259C366900A70D86 /* SceneDelegate.swift in Sources */,
+				5E38B06F259C36B400A70D86 /* TimerView.swift in Sources */,
 				5E38B05D259C366900A70D86 /* Task_Timer.xcdatamodeld in Sources */,
 				5E38B05A259C366900A70D86 /* ContentView.swift in Sources */,
 			);
