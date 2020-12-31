@@ -7,31 +7,53 @@
 
 import SwiftUI
 
+enum FocusMode {
+    case focusing
+    case resting
+    
+}
+
 struct TimerView: View {
     @State var progressValue: Float = 0.1
     @State var timerRunning: Bool = false
     @State var defaultValue: Int = 25
+    @State var focusMode: FocusMode = .focusing
     
     var body: some View {
-        ZStack {
-            Color.yellow
-                .opacity(0.1)
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                ProgressCircle(progress: self.$progressValue)
-                    .frame(width: 300.0, height: 300.0)
-                    .padding(40.0)
-                PlayButton(isPlaying: self.$timerRunning)
-                    .frame(width: 80, height: 80)
-                    .onTapGesture(perform: {
-                        self.timerRunning.toggle()
-                    })
-                TimerSelector(timeValue: self.$defaultValue)
-                    .frame(width: 80, height: 80)
+        VStack {
+            ZStack {
+                Color.yellow
+                    .opacity(0.1)
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack {
+                    // Title
+                    if focusMode == .focusing {
+                        Text("Focus Time")
+                            .font(.largeTitle)
+                            .bold()
+                    } else {
+                        Text("Break Time")
+                            .font(.largeTitle)
+                            .bold()
+                    }
+                    // Time
+                    
+                    
+                    // Timer selector
+                    
+
+                    PlayButton(isPlaying: self.$timerRunning)
+                        .frame(width: 80, height: 80)
+                        .onTapGesture(perform: {
+                            self.timerRunning.toggle()
+                        })
+                    TimerSelector(timeValue: self.$defaultValue)
+                        .frame(width: 80, height: 80)
+                    
+                }
                 
             }
-            
         }
     }
 }
@@ -72,12 +94,11 @@ struct PlayButton: View {
 
 struct TimerSelector: View {
     @Binding var timeValue: Int
-    
     var body: some View {
         ZStack(alignment: .center) {
             Stepper(" ", value: self.$timeValue)
         }
-            Text("\(self.timeValue)")
+        Text("\(self.timeValue)")
     }
 }
 
